@@ -1,5 +1,5 @@
 /* styles/index.css */
-.inicio-container {
+.container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
@@ -11,14 +11,14 @@
   gap: 10px;
 }
 
-.inicio-title {
+.title {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
   text-align: center;
 }
 
-.inicio-input {
+.input {
   width: 100%;
   max-width: 300px;
   padding: 12px;
@@ -28,7 +28,7 @@
   font-size: 1rem;
 }
 
-.inicio-button {
+.button {
   background-color: #222;
   color: white;
   padding: 12px;
@@ -42,18 +42,18 @@
   transition: background-color 0.3s ease;
 }
 
-.inicio-button:hover {
+.button:hover {
   background-color: #444;
 }
 
 /* Responsive */
 @media (max-width: 480px) {
-  .inicio-title {
+  .title {
     font-size: 1.5rem;
   }
 
-  .inicio-input,
-  .inicio-button {
+  .input,
+  .button {
     font-size: 0.95rem;
   }
 }

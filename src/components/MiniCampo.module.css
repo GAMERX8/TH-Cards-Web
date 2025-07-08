@@ -10,7 +10,7 @@
   margin: auto;
 }
 
-.mini-card {
+.card {
   position: absolute;
   width: 60px;
   height: 90px;
@@ -20,7 +20,7 @@
   justify-content: center;
 }
 
-.carta-bg {
+.bg {
   position: absolute;
   width: 100%;
   height: 100%;

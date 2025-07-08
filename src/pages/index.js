@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { db } from "../firebase/firebaseClient";
 import { collection, getDocs } from "firebase/firestore";
-import "./index.module.css";
+import styles from "./index.module.css";
 
 export default function Home() {
   const [codigo, setCodigo] = useState("");
@@ -33,16 +33,16 @@ export default function Home() {
   };
 
   return (
-    <div className="inicio-container">
-      <h1 className="inicio-title">Ingresa tu código</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Ingresa tu código</h1>
       <input
         type="text"
         value={codigo}
         onChange={(e) => setCodigo(e.target.value)}
         placeholder="Código único"
-        className="inicio-input"
+        className={styles.input}
       />
-      <button onClick={verificarCodigo} className="inicio-button">
+      <button onClick={verificarCodigo} className={styles.button}>
         Ver Carta
       </button>
     </div>

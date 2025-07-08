@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, doc, getDocs, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase/firebaseClient";
-import "./MiniCampo.module.css"; // Asegúrate de que este archivo exista y tenga los estilos
+import styles from "./MiniCampo.module.css"; // Asegúrate de que este archivo exista y tenga los estilos
 
 const formacionesMap = {
   "2-2-1": [
@@ -235,7 +235,7 @@ export default function MiniCampoWeb({ teamId }) {
   const layout = formacionesMap[formacion] || [];
 
   return (
-    <div className="campo">
+    <div className={styles.campo}>
       {layout.map(({ posicion, top, left }) => {
         const jugador = jugadoresConPos.find((j) => j.posicion === posicion);
         if (!jugador) return null;
@@ -243,23 +243,23 @@ export default function MiniCampoWeb({ teamId }) {
         return (
           <div
             key={jugador.id}
-            className="mini-card"
+            className={styles.card}
             style={{ top, left }}
           >
             {/* fondo diseño de carta */}
-            <img src={jugador.diseñoCarta} alt="diseño" className="carta-bg" />
+            <img src={jugador.diseñoCarta} alt="diseño" className={styles.bg} />
 
             {/* imagen jugador */}
             {jugador.imagenJugador && (
               <img
                 src={jugador.imagenJugador}
                 alt={jugador.nombre}
-                className="jugador"
+                className={styles.jugador}
               />
             )}
 
             {/* nombre */}
-            <div className="nombre">{jugador.nombre}</div>
+            <div className={styles.nombre}>{jugador.nombre}</div>
           </div>
         );
       })}
