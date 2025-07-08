@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, doc, getDocs, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase/firebaseClient";
-import "./MiniCampo.css"; // Asegúrate de que este archivo exista y tenga los estilos
+import "./MiniCampo.module.css"; // Asegúrate de que este archivo exista y tenga los estilos
 
 const formacionesMap = {
   "2-2-1": [

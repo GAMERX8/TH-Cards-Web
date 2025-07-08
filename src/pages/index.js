@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { db } from "../firebase/firebaseClient";
 import { collection, getDocs } from "firebase/firestore";
-import "./index.css";
+import "./index.module.css";
 
 export default function Home() {
   const [codigo, setCodigo] = useState("");
