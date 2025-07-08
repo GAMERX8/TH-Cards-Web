@@ -1,0 +1,54 @@
+/* styles/MiniCampoWeb.css */
+.campo {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 2 / 3;
+  background-image: url('/Map.png'); /* asegúrate de que el campo esté en /public/Map.png */
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+.mini-card {
+  position: absolute;
+  width: 60px;
+  height: 90px;
+  transform: translate(-30px, -45px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.carta-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  border-radius: 8px;
+}
+
+.jugador {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 8px;
+  opacity: 0.95;
+}
+
+.nombre {
+  position: absolute;
+  bottom: 2px;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 2px 0;
+  z-index: 2;
+}

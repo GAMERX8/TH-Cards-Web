@@ -1,0 +1,59 @@
+/* styles/index.css */
+.inicio-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 1rem;
+  background-color: #fff;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.inicio-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.inicio-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.inicio-button {
+  background-color: #222;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inicio-button:hover {
+  background-color: #444;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .inicio-title {
+    font-size: 1.5rem;
+  }
+
+  .inicio-input,
+  .inicio-button {
+    font-size: 0.95rem;
+  }
+}

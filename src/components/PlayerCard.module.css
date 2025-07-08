@@ -1,0 +1,187 @@
+.container {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 2/3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+}
+
+/* Badge de capitán */
+.badge {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  width: 65px;
+  height: 75px;
+  object-fit: contain;
+}
+
+/* OVR y posición */
+.ovrContainer {
+  position: absolute;
+  top: 20%;
+  left: 13%;
+  text-align: center;
+  color: #000;
+}
+
+.ovr {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.pos {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Imagen del jugador */
+.playerWrapper {
+  width: 92%;
+  height: 54%;
+  margin-top: 10%;
+  position: relative;
+}
+
+.playerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Gradiente inferior */
+.fade {
+  position: absolute;
+  bottom: -3px;
+  height: 55px;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, #d4af37);
+}
+
+/* Nombre del jugador */
+.nombre {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 4px;
+  text-align: center;
+  padding: 0 10px;
+  word-wrap: break-word;
+}
+
+/* Stats */
+.statsContainer {
+  margin-top: 10px;
+  width: 85%;
+}
+
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.stat {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  width: 13%;
+  text-align: center;
+  min-width: 25px;
+}
+
+/* Iconos (bandera y escudo) */
+.iconsRow {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 480px) {
+  .container {
+    padding: 2px;
+  }
+  
+  .card {
+    max-width: 450px;
+  }
+  
+  .badge {
+    width: 65px;
+    height: 70px;
+  }
+
+  .fade {
+    bottom: -3px;
+  }
+  
+  .ovrContainer {
+    left: 10%;
+  }
+
+  .ovr {
+    font-size: 40px;
+  }
+  
+  .statsContainer {
+    width: 90%;
+  }
+  
+  .stat {
+    width: 16%;
+  }
+
+  .playerWrapper {
+    height: 50%;
+  }
+}
+
+/* Media queries para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .card {
+    max-width: 300px;
+  }
+}
+
+/* Media queries para desktop */
+@media (min-width: 769px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .card {
+    max-width: 320px;
+  }
+}
